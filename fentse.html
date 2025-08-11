@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My hobbie</title>
+    <style>
+        body{
+            background: linear-gradient(102.2deg, rgb(109, 118, 150) 7.1%, rgb(89, 72, 79) 14.7%, rgb(69, 92, 79) 28%, rgb(204, 85, 67) 43.4%, rgb(237, 181, 121) 60.2%, rgb(219, 230, 175) 76.8%);
+        }
+        p{
+            font-size: 18px;
+            line-height: 1.5;
+        }
+        h1{
+            text-align: center;
+            font-size: 38px;
+            line-height: 48px;
+        }
+        h2{
+            text-align: center;
+            font-family: monospace ;
+            font-size: 24px;
+            line-height: 27px;
+        }
+        img{
+            width: 100%;
+        }
+        .us{
+            background-color: azure;
+            max-width: 600px;
+            padding:20px;
+            border-radius: 8px;
+            margin: 10px auto;
+        }
+        button{
+            display:block;
+            margin:0 auto;
+            background-color: white;
+            border-radius: 5px;
+            border: 1px solid brown;
+            padding: 10px 12px;
+            transition: all 150ms ease-in-out;
+        }
+        button:hover{
+            background-color: red;
+            color: grey;
+            cursor: pointer;
+        }
+        footer{
+            text-align: center;
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .them{
+            background-color: black;
+            color: white;
+            font-size: 12px;
+            padding:  8px;
+        }
+        .them:hover{
+            color: black;
+            background-color: white;
+        }
+        .intro-picture{
+            border-radius: 10px;
+            transition: all 150ms ease-in-out;
+        }
+        .intro-picture:hover{
+            filter:contrast(80%);
+            transform: scale(1.3);
+        }
+        .grid{
+            display:grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-gap: 20px;
+            margin: 15px 0;
+        }
+        .grid img{
+            width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+        }
+        .first{
+            background: linear-gradient(68.8deg, rgba(0, 0, 0, 0.95) 1.8%, rgb(0, 55, 79) 31.8%, rgb(9, 93, 134) 56.2%, rgb(15, 155, 217) 89%);
+            color: white;
+        }
+        .first .us{
+            background: radial-gradient(circle at 10% 20%, rgb(0, 107, 141) 0%, rgb(0, 69, 91) 90%);
+        }
+        .first a{
+            color: beige;
+        } 
+    </style>
+</head>
+<body>
+    <button class="them">Dark theme</button>
+    <div class="us">
+    <h1>
+        Painting
+    </h1>
+    <h2>
+        My favourite hobby
+    </h2>
+    <a href="https://www.shecodes.io/">
+   <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/959/original/OIP.jpeg?1754769002"/ class="intro-picture"></a>
+   <div class="grid">
+    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/982/original/OIP.jpeg?1754843852"/>
+   <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/985/original/OIP_%281%29.jpeg?1754844518"/ >
+<img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/986/original/OIP_%282%29.jpeg?1754844812" />
+   <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/171/956/original/OIP_%281%29.jpeg?1754768951"/ >
+    </div>
+   <p>
+    Painting is a visual art, which is characterized by the practice of applying paint, pigment, color or other medium to a
+    solid surface.The medium is commonly applied to the base with a brush. Other
+    implements, such as palette knives, sponges, airbrushes, the artist's fingers, or even a dripping technique that uses
+    gravity may be used. One who produces paintings is called a painter
+<br />
+<br/>
+📖<a href="https://en.wikipedia.org/wiki/Painting"><strong> Read on Wikipedia</strong></a>
+</p>
+<button class="brother">Learn to Paint</button>
+<footer>Coded with 👩‍💻 <a href="https://www.shecodes.io/learn/workshops">Ofentsemohlasedi</a>with HTML , CSS and JavaScript</footer>
+</div>
+<script>
+     function contactUs() {
+            let name = prompt("What is your name?");
+            let email = prompt("What is your email address?");
+
+            alert(
+                "Thanks " + name + "! We will be in touch with more details. Feel free to contact us if you have any questions hello@shecodes.io");
+
+        }
+
+    function changeTheme() {
+        let body=document.querySelector("body");
+
+    if(body.classList.contains("first")){
+       body.classList.remove("first");
+    } 
+    else {
+        body.classList.add("first");
+    }
+    }
+     
+    let contactButton=document.querySelector(".brother");
+    contactButton.addEventListener("click",contactUs);
+
+   let them=document.querySelector(".them");
+   them.addEventListener("click",changeTheme);
+</script>
+</body>
+</html>
